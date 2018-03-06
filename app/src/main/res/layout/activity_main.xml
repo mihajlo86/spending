@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<android.support.v4.widget.DrawerLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="rs.mihajlojovanovic.spending.views.MainActivity">
+    android:fitsSystemWindows="true">
 
     <RelativeLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-</android.support.constraint.ConstraintLayout>
+    <ListView
+        android:id="@+id/leftDrawer"
+        android:layout_width="241dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/vpi__bright_foreground_holo_dark"
+        android:choiceMode="singleChoice"/>
+
+</android.support.v4.widget.DrawerLayout>

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Spending</string>
+    <string name="more_than_99">99+</string>
+    <string name="spending">Spending</string>
 </resources>

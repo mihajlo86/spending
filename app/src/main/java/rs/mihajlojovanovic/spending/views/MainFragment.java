@@ -8,11 +8,16 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -21,6 +26,10 @@ import rs.mihajlojovanovic.spending.App;
 import rs.mihajlojovanovic.spending.R;
 import rs.mihajlojovanovic.spending.data.entities.GasStationEntity;
 import rs.mihajlojovanovic.spending.viewmodels.GasStationViewModel;
+import rs.mihajlojovanovic.spending.views.adapters.DrawerItem;
+import rs.mihajlojovanovic.spending.views.adapters.DrawerItemAdapter;
+
+import static rs.mihajlojovanovic.spending.App.SHARED_PREFERENCES;
 
 public class MainFragment extends Fragment {
 
