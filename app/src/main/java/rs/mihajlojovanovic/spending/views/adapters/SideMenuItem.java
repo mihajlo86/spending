@@ -2,9 +2,9 @@ package rs.mihajlojovanovic.spending.views.adapters;
 
 import android.util.Log;
 
-public class DrawerItem {
+public class SideMenuItem {
 
-    private static final String TAG = "Class " + DrawerItem.class.getSimpleName();
+    private static final String TAG = "Class " + SideMenuItem.class.getSimpleName();
     private int icon;
     private String label;
     private String notification;

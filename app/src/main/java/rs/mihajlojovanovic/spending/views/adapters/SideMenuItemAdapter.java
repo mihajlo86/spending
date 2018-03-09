@@ -13,18 +13,18 @@ import java.util.List;
 
 import rs.mihajlojovanovic.spending.R;
 
-public class DrawerItemAdapter extends ArrayAdapter<DrawerItem> {
+public class SideMenuItemAdapter extends ArrayAdapter<SideMenuItem> {
 
     private final Context ctx;
     private final int layoutResourceId;
-    private List<DrawerItem> drawerItems;
+    private List<SideMenuItem> sideMenuItems;
 
-    public DrawerItemAdapter(Context ctx, int layoutResourceId, List<DrawerItem> drawerItems)
+    public SideMenuItemAdapter(Context ctx, int layoutResourceId, List<SideMenuItem> sideMenuItems)
     {
-        super(ctx, layoutResourceId, drawerItems);
+        super(ctx, layoutResourceId, sideMenuItems);
         this.layoutResourceId = layoutResourceId;
         this.ctx = ctx;
-        this.drawerItems = drawerItems;
+        this.sideMenuItems = sideMenuItems;
     }
 
     @NonNull
@@ -46,9 +46,9 @@ public class DrawerItemAdapter extends ArrayAdapter<DrawerItem> {
         }
         else
             holder = (ViewHolder) convertView.getTag();
-        if ((drawerItems == null) || ((position + 1) > drawerItems.size()))
+        if ((sideMenuItems == null) || ((position + 1) > sideMenuItems.size()))
             return convertView;
-        DrawerItem item = drawerItems.get(position);
+        SideMenuItem item = sideMenuItems.get(position);
         holder.tvLabel.setText(item.getLabel());
         holder.ivIcon.setImageResource(item.getIcon());
         if (item.getNotificationsCount() > 0)
